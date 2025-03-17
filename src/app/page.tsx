@@ -8,7 +8,7 @@ import Link from "next/link";
 import { FaEnvelope, FaGithub, FaLinkedin } from "react-icons/fa";
 import { useTheme } from "next-themes";
 
-import profilePicture from "../../public/DaniloLima.jpg";
+import profilePicture from "../../public/profile_pic.jpg";
 import awsIcon from "../../public/aws_icon.png";
 import pythonIcon from "../../public/python_icon.png";
 import typescriptIcon from "../../public/typescript_icon.png";
@@ -20,7 +20,11 @@ import nodeIcon from "../../public/nodejs_icon.png";
 import djangoIcon from "../../public/django_icon.png";
 import fastapiIcon from "../../public/fastapi_icon.png";
 import springIcon from "../../public/spring_icon.png";
-import fastapiProject from "../../public/fastapi.png";
+import fastapiProjectPicture from "../../public/fastapi.png";
+import whatToWearProjectPicture from "../../public/whattowear_project.png";
+import snackerProjectPictureicture from "../../public/snacker_project.png";
+import gamestoreProjectPicture from "../../public/gamestore_project.png";
+import inventoryProjectPicture from "../../public/inventory_project.png";
 import { Card, CardContent } from "@/components/ui/card";
 
 
@@ -66,7 +70,7 @@ export default function Home() {
           >
             <h2 className="text-lg text-gray-600 dark:text-gray-400 font-semibold">Turning ideas into scalable software solutions.</h2>
 
-            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">AWS Certified. Building scalable, cloud-based, end-to-end solutions in Python, JavaScript/TypeScript and Java and several frameworks, such as <span className="text-black dark:text-white font-semibold">React, NextJs, Node/Express, Django, FastApi and Spring Boot</span>. Experient in serverless architecture and microservices.</p>
+            <p className="text-gray-600 text-sm dark:text-gray-400 max-w-2xl">AWS Certified. Building scalable, cloud-based, end-to-end solutions in Python, JavaScript/TypeScript and Java and several frameworks, such as <span className="text-black dark:text-white font-semibold">React, ReactNative, NextJs, Node/Express, Django, FastApi and Spring Boot</span>. Experient in serverless architecture and microservices.</p>
           </motion.div>
 
           <motion.div
@@ -97,9 +101,17 @@ export default function Home() {
             transition={{ duration: 0.8 }}
             className="flex items-center gap-3"
           >
-            <Button
-              className="rounded-full bg-gradient-to-r from-rose-400 to-indigo-600 text-white transition-transform hover:scale-105 cursor-pointer"
-            >Resume</Button>
+            <a
+              href="/files/cv_dlima.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              download
+            >
+              <Button
+                className="rounded-full bg-gradient-to-r from-rose-400 to-indigo-600 text-white transition-transform hover:scale-105 cursor-pointer"
+              >Resume</Button>
+            </a>
+
             <Link
               href="https://github.com/danilobml"
               className="text-gray-600 dark:text-gray-400 hover:text-black dark:hover:text-white"
@@ -226,13 +238,13 @@ export default function Home() {
             className="space-y-8"
           >
 
-            <h2 className="text-xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Projects:</h2>
+            <h2 className="text-xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Sample Projects:</h2>
 
-            <div className="mt-2 grid grid-cols-1 md:grid-cols-3 gap-3">
+            <div className="mt-2 grid grid-cols-1 md:grid-cols-4 gap-1">
               <Link href="https://what-to-wear-api.onrender.com/docs" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={fastapiProject} alt="fastapi-project" className="rounded-lg mb-4 h-30" />
+                    <Image src={whatToWearProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-30" />
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="font-medium">What to Wear</h3>
@@ -243,70 +255,42 @@ export default function Home() {
                 </Card>
               </Link>
 
-              <Link href="https://what-to-wear-api.onrender.com/docs" target="_blank">
+              <Link href="https://github.com/danilobml/Snacker-FoodDelivery/tree/main" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={fastapiProject} alt="snacker-logo" className="rounded-lg mb-4 h-30" />
+                    <Image src={snackerProjectPictureicture} alt="snacker-logo" className="rounded-lg mb-4 h-30" />
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="font-medium">Snacker-FoodDelivery</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">React Native, AWS Lambda</p>
+                        <h3 className="font-medium">Snacker-Food</h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">ReactNative, NativeWind, Lambda</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               </Link>
 
-              <Link href="https://what-to-wear-api.onrender.com/docs" target="_blank">
+              <Link href="https://github.com/danilobml/gamestore" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={fastapiProject} alt="fastapi-project" className="rounded-lg mb-4 h-30" />
+                    <Image src={gamestoreProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-30" />
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="font-medium">What to Wear</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">FastAPI, SqlModel, LLM integration</p>
+                        <h3 className="font-medium">Gamestore</h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">Spring Boot, JPA, Postgres, Security</p>
                       </div>
                     </div>
                   </CardContent>
                 </Card>
               </Link>
 
-              <Link href="https://what-to-wear-api.onrender.com/docs" target="_blank">
+              <Link href="https://github.com/danilobml/inventory-manager" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={fastapiProject} alt="fastapi-project" className="rounded-lg mb-4 h-30" />
+                    <Image src={inventoryProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-30" />
                     <div className="flex items-center justify-between">
                       <div>
-                        <h3 className="font-medium">What to Wear</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">FastAPI, SqlModel, LLM integration</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="https://what-to-wear-api.onrender.com/docs" target="_blank">
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
-                    <Image src={fastapiProject} alt="fastapi-project" className="rounded-lg mb-4 h-30" />
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-medium">What to Wear</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">FastAPI, SqlModel, LLM integration</p>
-                      </div>
-                    </div>
-                  </CardContent>
-                </Card>
-              </Link>
-
-              <Link href="https://what-to-wear-api.onrender.com/docs" target="_blank">
-                <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
-                  <CardContent className="p-4">
-                    <Image src={fastapiProject} alt="fastapi-project" className="rounded-lg mb-4 h-30" />
-                    <div className="flex items-center justify-between">
-                      <div>
-                        <h3 className="font-medium">What to Wear</h3>
-                        <p className="text-sm text-gray-600 dark:text-gray-400">FastAPI, SqlModel, LLM integration</p>
+                        <h3 className="font-medium">Inventory Manager</h3>
+                        <p className="text-sm text-gray-600 dark:text-gray-400">NodeJs/Express (TypeScript), Prisma</p>
                       </div>
                     </div>
                   </CardContent>
