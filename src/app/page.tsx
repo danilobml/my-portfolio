@@ -244,7 +244,7 @@ export default function Home() {
               <Link href="https://what-to-wear-api.onrender.com/docs" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={whatToWearProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-40 md:h-27" />
+                    <Image src={whatToWearProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 w-full h-40 md:h-27" />
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="font-medium">What to Wear</h3>
@@ -258,7 +258,7 @@ export default function Home() {
               <Link href="https://github.com/danilobml/Snacker-FoodDelivery/tree/main" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={snackerProjectPictureicture} alt="snacker-logo" className="rounded-lg mb-4 h-40 md:h-27" />
+                    <Image src={snackerProjectPictureicture} alt="snacker-logo" className="rounded-lg mb-4 w-full h-40 md:h-27" />
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="font-medium">Snacker-Food</h3>
@@ -272,7 +272,7 @@ export default function Home() {
               <Link href="https://github.com/danilobml/gamestore" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={gamestoreProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-40 md:h-27" />
+                    <Image src={gamestoreProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 w-full h-40 md:h-27" />
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="font-medium">Gamestore</h3>
@@ -286,7 +286,7 @@ export default function Home() {
               <Link href="https://github.com/danilobml/inventory-manager" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={inventoryProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-40 md:h-27" />
+                    <Image src={inventoryProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 w-full h-40 md:h-27" />
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="font-medium">Inventory Manager</h3>
