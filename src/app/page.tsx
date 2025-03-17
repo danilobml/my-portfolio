@@ -34,7 +34,7 @@ export default function Home() {
 
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
-      <div className="mx-auto max-w-3xl px-4 py-20">
+      <div className="mx-auto max-w-3xl px-4 py-18">
 
         <motion.header
           initial={{ opacity: 0, x: -100 }}
@@ -241,7 +241,7 @@ export default function Home() {
             <h2 className="text-xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Sample Projects:</h2>
 
             <div className="mt-2 grid grid-cols-1 md:grid-cols-4 gap-1">
-              <Link href="https://what-to-wear-api.onrender.com/docs" target="_blank">
+              <Link href="https://github.com/danilobml/what-to-wear-api" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
                     <Image src={whatToWearProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 w-full h-40 md:h-27" />
