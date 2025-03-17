@@ -29,7 +29,8 @@ import { Card, CardContent } from "@/components/ui/card";
 
 export default function Home() {
 
-  const { theme } = useTheme();
+  const { theme, systemTheme } = useTheme();
+  const currentTheme = theme === "system" ? systemTheme : theme;
 
   return (
     <div className="min-h-screen bg-white dark:bg-black text-black dark:text-white transition-colors duration-300">
@@ -79,18 +80,18 @@ export default function Home() {
           >
             <h2 className="text-xl font-semibold bg-gradient-to-r from-rose-600 via-indigo-500 to-sky-500 bg-clip-text text-transparent inline-block">Tech Stack:</h2>
             <div className="flex mt-5 gap-6">
-              <Image src={awsIcon} alt="aws-icon" className="h-13 w-13 inline-block dark:bg-white" />
-              <Image src={typescriptIcon} alt="ts-icon" className="h-14 w-14 inline-block" />
-              <Image src={pythonIcon} alt="python-icon" className="h-13 w-13 inline-block" />
-              <Image src={javaIcon} alt="java-icon" className="h-13 w-13 inline-block" />
+              <Image src={awsIcon} alt="aws-icon" className="h-10 w-10 md-h-13 md-w-13 inline-block dark:bg-white" />
+              <Image src={typescriptIcon} alt="ts-icon" className="h-10 w-10 md-h-14 md-w-14 inline-block" />
+              <Image src={pythonIcon} alt="python-icon" className="h-10 w-10 md-h-13 md-w-13 inline-block" />
+              <Image src={javaIcon} alt="java-icon" className="h-10 w-10 md-h-13 md-w-13 inline-block" />
             </div>
             <div className="flex mt-2 gap-5">
-              <Image src={reactIcon} alt="react-icon" className="h-13 w-13 inline-block" />
-              <Image src={theme !== 'dark' ? nextIcon : nextIconDark} alt="next-icon" className="h-13 w-13 inline-block rounded-full" />
-              <Image src={nodeIcon} alt="nodejs-icon" className="h-13 w-13 inline-block" />
-              <Image src={djangoIcon} alt="django-icon" className="h-12 w-12 inline-block" />
-              <Image src={fastapiIcon} alt="fastapi-icon" className="h-13 w-13 inline-block" />
-              <Image src={springIcon} alt="spring-icon" className="h-13 w-13 inline-block" />
+              <Image src={reactIcon} alt="react-icon" className="h-10 w-10 md-h-13 md-w-13 inline-block" />
+              {currentTheme ? (<Image src={currentTheme !== "dark" ? nextIcon : nextIconDark} alt="next-icon" className="h-10 w-10 md-h-13 md-w-13 inline-block rounded-full" />) : null}
+              <Image src={nodeIcon} alt="nodejs-icon" className="h-10 w-10 md-h-13 md-w-13 inline-block" />
+              <Image src={djangoIcon} alt="django-icon" className="h-10 w-10 md-h-12 md-w-12 inline-block" />
+              <Image src={fastapiIcon} alt="fastapi-icon" className="h-10 w-10 md-h-13 md-w-13 inline-block" />
+              <Image src={springIcon} alt="spring-icon" className="h-10 w-10 md-h-13 md-w-13 inline-block" />
             </div>
           </motion.div>
 
@@ -243,7 +244,7 @@ export default function Home() {
               <Link href="https://what-to-wear-api.onrender.com/docs" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={whatToWearProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-30" />
+                    <Image src={whatToWearProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-40 md:h-27" />
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="font-medium">What to Wear</h3>
@@ -257,7 +258,7 @@ export default function Home() {
               <Link href="https://github.com/danilobml/Snacker-FoodDelivery/tree/main" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={snackerProjectPictureicture} alt="snacker-logo" className="rounded-lg mb-4 h-30" />
+                    <Image src={snackerProjectPictureicture} alt="snacker-logo" className="rounded-lg mb-4 h-40 md:h-27" />
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="font-medium">Snacker-Food</h3>
@@ -271,7 +272,7 @@ export default function Home() {
               <Link href="https://github.com/danilobml/gamestore" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={gamestoreProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-30" />
+                    <Image src={gamestoreProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-40 md:h-27" />
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="font-medium">Gamestore</h3>
@@ -285,7 +286,7 @@ export default function Home() {
               <Link href="https://github.com/danilobml/inventory-manager" target="_blank">
                 <Card className="bg-gray-50 dark:bg-zinc-900 border-gray-200 dark:border-zinc-700 transition-transform duration-300 hover:scale-105 cursor-pointer">
                   <CardContent className="p-4">
-                    <Image src={inventoryProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-30" />
+                    <Image src={inventoryProjectPicture} alt="fastapi-project" className="rounded-lg mb-4 h-40 md:h-27" />
                     <div className="flex items-center justify-between">
                       <div>
                         <h3 className="font-medium">Inventory Manager</h3>
