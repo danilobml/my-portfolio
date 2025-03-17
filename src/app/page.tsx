@@ -20,7 +20,6 @@ import nodeIcon from "../../public/nodejs_icon.png";
 import djangoIcon from "../../public/django_icon.png";
 import fastapiIcon from "../../public/fastapi_icon.png";
 import springIcon from "../../public/spring_icon.png";
-import fastapiProjectPicture from "../../public/fastapi.png";
 import whatToWearProjectPicture from "../../public/whattowear_project.png";
 import snackerProjectPictureicture from "../../public/snacker_project.png";
 import gamestoreProjectPicture from "../../public/gamestore_project.png";
